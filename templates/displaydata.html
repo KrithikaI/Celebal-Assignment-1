@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Displaying Data</title>
+</head>
+<body>
+	<h2>Files in current directory</h2>
+    <ul>
+    {% for file in files %}
+        <li><a href="{{ url_for('files_and_dbentries', filename=file) }}">{{ file }}</a></li>
+    {% endfor %}
+    </ul>
+<table>
+  <thead>
+    <tr>
+        <th>DATABASE OUTPUT</th>
+    </tr>
+  </thead>    
+    <tbody>
+       
+            <tr>
+                <td><b>Name</b></td>
+            </tr>
+			{% for row in data %}  
+			<tr>
+				<td> {{row.inputtext}} </td>
+			</tr>
+        {% endfor %}
+    </tbody>
+</table>
+</body>
+</html>

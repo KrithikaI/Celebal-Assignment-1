@@ -1,0 +1,6 @@
+<label>{{ msg }}</label>
+<form action="{{ url_for('form') }}" method = "POST">
+    <p>Name <input type = "text" name = "Name" /></p>
+    <p>Image <input type="file" id="img" name="img" accept="image/*"></p>
+    <p><input type = "submit" value = "Submit" /></p>
+</form>

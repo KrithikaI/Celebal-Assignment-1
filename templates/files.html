@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Files</title>
+  </head>
+  <body>
+	<h2>Files in current directory</h2>
+    <ul>
+    {% for file in files %}
+        <li><a href="{{ url_for('files', filename=file) }}">{{ file }}</a></li>
+    {% endfor %}
+    </ul>
+  </body>
+</html>
